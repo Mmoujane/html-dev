@@ -1,101 +1,114 @@
+<!DOCTYPE html>
 <html lang="en">
- <head>
- <meta charset="UTF-8">
- <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <link rel="icon" href="res/images/favicon.ico">
- <title>My Dashboard</title>
- </head>
- <body>
-    <header>
-        <strong>Welcome to your dashboard!</strong>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="res/images/favicon.ico">
+  <link rel="stylesheet" href="res/css/style.css">
+  <title>My Dashboard</title>
+</head>
+<body>
+
+    <header class="header">
+        <strong class="logo">Welcome to your dashboard!</strong>
+        <nav class="nav">
+          <ul>
+            <li><a href="https://www.inpt.ac.ma/" target="_blank">moodle</a></li>
+            <li><a href="https://m.inpt.ac.ma/" target="_blank">Courses</a></li>
+          </ul>
+        </nav>
     </header>
-    <section>
-        <div>
-        <img src="res/images/me.png" width="128" height="128" alt="My picture">
-        </div>
-        <div>
-        <ul>
+
+  <section>
+    <div>
+      <img src="res/images/me.png" width="128" height="128" alt="My picture">
+    </div>
+    <div>
+      <ul>
         <li>Your name</li>
-        <li> A date following this format dd/mm/yyyy</li>
+        <li>A date following this format dd/mm/yyyy</li>
         <li>Software Engineering</li>
-        </ul>
-        </div>
-        <div>
-        <strong>2.65</strong>
-        </div>
-       </section>
-       <section>
-        <h1>Courses</h1>
-        <table>
-        <thead>
+      </ul>
+    </div>
+    <div>
+      <strong>2.65</strong>
+    </div>
+  </section>
+
+  <section>
+    <h1>Courses</h1>
+    <table>
+      <thead>
         <tr>
-        <th>#</th>
-        <th>Course Title</th>
-        <th>Semester</th>
-        <th>Grade</th>
+          <th>#</th>
+          <th>Course Title</th>
+          <th>Semester</th>
+          <th>Grade</th>
         </tr>
-        </thead>
-        <tbody>
+      </thead>
+      <tbody>
         <tr>
-        <td>1</td>
-        <td><a href="">Agile software development</a></td>
-        <td>fall</td>
-        <td>82</td>
-        </tr>
-        <tr>
-        <td>2</td>
-        <td> <a href="">Systems modelling</a></td>
-        <td>fall</td>
-        <td>85</td>
+          <td>1</td>
+          <td><a href="https://example.com/agile" target="_blank">Agile software development</a></td>
+          <td>fall</td>
+          <td>82</td>
         </tr>
         <tr>
-        <td>3</td>
-        <td> <a href="">Requirements Engineering </a></td>
-        <td>fall</td>
-        <td>99</td>
-    </tr>
-    <tr>
-    <td>4</td>
-    <td> <a href="">Human Computer Interaction</a> </td>
-    <td>fall</td>
-    <td>65</td>
-    </tr>
-    </tbody>
-    <tfoot>
-        <tr>
-            <th>id</th>
-            <th>titles</th>
-            <th>semstere</th>
-            <th>grade over 100</th>
+          <td>2</td>
+          <td><a href="https://example.com/systems-modelling" target="_blank">Systems modelling</a></td>
+          <td>fall</td>
+          <td>85</td>
         </tr>
-    </tfoot>
+        <tr>
+          <td>3</td>
+          <td><a href="https://example.com/requirements-engineering" target="_blank">Requirements Engineering</a></td>
+          <td>fall</td>
+          <td>99</td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td><a href="https://example.com/hci" target="_blank">Human Computer Interaction</a></td>
+          <td>fall</td>
+          <td>65</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <td colspan="4">Grades are subject to change.</td>
+        </tr>
+      </tfoot>
     </table>
-   </section>
-   <form>
-        <label for="cars">course title</label>
-        <input type="text" id="courset" name="courset">
-        <label for="semestere">semestere</label>
-  <select id="semestere" name="semestere">
-    <option value="fall">fall</option>
-    <option value="spring">spring</option>
-  </select>
-  <strong>attendence</strong>
-  <input type="radio" id="va" name="attendence" value="virtual attendence">
-  <label for="va">virtual attendence</label><br>
-  <input type="radio" id="pa" name="attendence" value="physical attendence">
-  <label for="css">physical attendence</label><br>
-  <button>submit</button>
-   </form>
-   
-    <footer>
-        <ul>
-        <li>
-        <a href="https://www.inpt.ac.ma/" target="_blank">moodle</a>
-        </li>
-        <li>
-        <a href="https://m.inpt.ac.ma/" target="_blank">Courses</a>
-        </li>
-        </ul>
-       </footer>
- </body>
+  </section>
+
+  <section>
+    <h2>Add New Course</h2>
+    <form action="#" method="post">
+        <label for="course-title">Course Title:</label>
+        <input type="text" id="course-title" name="course-title" required><br><br>
+      
+        <label for="semester">Semester:</label>
+        <select id="semester" name="semester" required>
+          <option value="">--Choose--</option>
+          <option value="fall">Fall</option>
+          <option value="spring">Spring</option>
+        </select><br><br>
+      
+        <strong>Attendance</strong><br>
+        <input type="radio" id="va" name="attendance" value="virtual">
+        <label for="va">Virtual Attendance</label><br>
+        <input type="radio" id="pa" name="attendance" value="physical">
+        <label for="pa">Physical Attendance</label><br><br>
+      
+        <input type="submit" value="Add Course">
+      </form>
+  </section>
+
+  <footer>
+    <ul>
+      <li><a href="https://www.inpt.ac.ma/" target="_blank">moodle</a></li>
+      <li><a href="https://m.inpt.ac.ma/" target="_blank">Courses</a></li>
+    </ul>
+  </footer>
+
+</body>
 </html>
